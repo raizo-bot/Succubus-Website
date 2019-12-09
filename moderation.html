@@ -15,7 +15,7 @@
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="sb-header" href="index.html"><img class="nav-logo" src="succbus-logo.png"/></a>
+		<a class="sb-header" href="index.html"><img class="nav-logo" src="succubus-logo.png"/></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		  <ul class="navbar-nav mr-auto">
@@ -48,33 +48,112 @@
 			
 			<h1 class="category-header">Moderation Commands</h1>
 			
+			<div class="command" id="mod-modlog">
+				<h3 class="command-header">Set Modlog</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$setlog <span class="arg">channel</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Set the channel to log server events to, such as roles given, messages deleted, etc.</p>
+				<h4>Required Permissions</h4>
+				<p class="command-perms">Manage Channels</p>
+			</div>
+			
+			<div class="command" id="mod-kick">
+				<h3 class="command-header">Kick</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$kick <span class="arg">user</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Kick the input <span class="arg">user</span> from the server.</p>
+				<h4>Required Permissions</h4>
+				<p class="command-perms">Kick Members</p>
+			</div>
+			
 			<div class="command" id="mod-ban">
 				<h3 class="command-header">Ban</h3>
 				<hr class="category-header-hr"/>
 				<h4>Usage</h4>
-				<p class="command-usage">ban <span class="arg">user</span></p>
+				<p class="command-usage">$$ban <span class="arg">user</span></p>
 				<h4>Description</h4>
-				<p class="command-description">Bans <span class="arg">user</span> from the server</p>
+				<p class="command-description">Ban the input <span class="arg">user</span> from the server.</p>
 				<h4>Required Permissions</h4>
-				<p class="command-perms">Ban Users</p>
+				<p class="command-perms">Ban Members</p>
 			</div>
 			
-			<div class="command" id="mod-dab">
-				<h3 class="command-header">Dab</h3>
+			<div class="command" id="mod-setwelcomechl">
+				<h3 class="command-header">Set Welcome Channel</h3>
 				<hr class="category-header-hr"/>
 				<h4>Usage</h4>
-				<p class="command-usage">dab <span class="arg">user</span></p>
+				<p class="command-usage">$$setwelcomechannel <span class="arg">#channel</span></p>
 				<h4>Description</h4>
-				<p class="command-description">Dabs on <span class="arg">user</span></p>
+				<p class="command-description">Set the channel to send the welcome message and welcome image to when a user joins the server. Leave the <span class="arg">#channel</span> blank to remove it.</p>
 				<h4>Required Permissions</h4>
-				<p class="command-perms">Server Owner</p>
+				<p class="command-perms">Manage Channels</p>
+				<div class="alert alert-info">
+					<h5 class="command-note-header">Note</h5>
+					<hr>
+					<p>Make sure you remember to set a welcome message!</p>
+				</div>	
+			</div>
+			
+			<div class="command" id="mod-setwelcomemsg">
+				<h3 class="command-header">Set Welcome Message</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$setwelcomemessage <span class="arg">message</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Set the welcome message. You can add specific text to the welcome message to achieve various effects.</p>
+				<h4>Required Permissions</h4>
+				<p class="command-perms">Manage Channels</p>
+				<div class="alert alert-info">
+					<h5 class="command-note-warning">Welcome Message Formatting</h5>
+					<hr>
+					<p>- [userMention] => Mention the user.<br />
+					- [serverName] => Print the server name.<br />
+					- [userUsername] => Print the username of the user.<br />
+					<b>Example:</b> Welcome [userMention] to the server! => Welcome @User to the server!</p>
+				</div>	
+			</div>
+			
+			<div class="command" id="mod-setwelcomeimg">
+				<h3 class="command-header">Set Welcome Image</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$setwelcomeimage <span class="arg">image url</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Set the welcome image. Valid image formats include .jpg, .png, and .gif.</p>
+				<h4>Required Permissions</h4>
+				<p class="command-perms">Manage Channels</p>			
+			</div>
+			
+			<div class="command" id="mod-removewelcomemsg">
+				<h3 class="command-header">Remove Welcome Message</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$removewelcomemessage</p>
+				<h4>Description</h4>
+				<p class="command-description">Removes the welcome message, if one exists.</p>
+				<h4>Required Permissions</h4>
+				<p class="command-perms">Manage Channels</p>			
+			</div>
+			
+			<div class="command" id="mod-removewelcomeimg">
+				<h3 class="command-header">Remove Welcome Image</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$removewelcomeimage</p>
+				<h4>Description</h4>
+				<p class="command-description">Removes the welcome image, if one exists.</p>
+				<h4>Required Permissions</h4>
+				<p class="command-perms">Manage Channels</p>			
 			</div>
 			
 			
 		</div>
 	
 		<footer>
-			<p class="footer-credit">Website created by Drewcification</p>
+			<center><p class="footer-credit">Website created by Drewcification</p></center>
 		</footer>
 	</body>
 </html>
