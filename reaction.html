@@ -46,28 +46,126 @@
 		<div class="container">
 			
 			
-			<h1 class="category-header">Reaction Commands</h1>
+			<h1 class="category-header">Reaction Role Commands</h1>
 			
-			<div class="command" id="react-ban">
-			  <h3 class="command-header">Ban</h3>
+			<div class="alert alert-info">
+					<h5 class="command-note-header">Note</h5>
+					<hr>
+					<p>Some of these commands require something called a Message ID. You can get a message's ID by enabling Developer Mode on your Discord client under Settings > Appearance > Developer Mode. <br />Right click on a message and click "Copy ID" to copy it's ID.</p>
+					<img src="copyid.png"></img>
+				</div>
+				
+			<div class="command" id="react-info">
+			  <h3 class="command-header">Reaction Role Info</h3>
 				<hr class="category-header-hr"/>
 				<h4>Usage</h4>
-				<p class="command-usage">ban <span class="arg">user</span></p>
+				<p class="command-usage">reactionrole</p>
 				<h4>Description</h4>
-				<p class="command-description">Bans <span class="arg">user</span> from the server</p>
+				<p class="command-description">View the current reaction role settings for the server.</p>
 				<h4>Required Permissions</h4>
-				<p class="command-perms">Ban Users</p>
+				<p class="command-perms">Manage Roles</p>
+				<div class="alert alert-info">
+					<h5 class="command-note-header">Alias</h5>
+					<hr>
+					<p>All commands start with <span class="arg">reactionrole</span>, or the <span class="arg">rr</span> alias.</p>
+				</div>
 		  </div>
 			
-		  <div class="command" id="react-dab">
-				<h3 class="command-header">Dab</h3>
+		  <div class="command" id="react-setchannel">
+				<h3 class="command-header">Set Reaction Role Channel</h3>
 				<hr class="category-header-hr"/>
 				<h4>Usage</h4>
-				<p class="command-usage">dab <span class="arg">user</span></p>
+				<p class="command-usage">$$rr setchannel <span class="arg">#channel</span></p>
 				<h4>Description</h4>
-				<p class="command-description">Dabs on <span class="arg">user</span></p>
+				<p class="command-description">Specify which channel to put reaction messages in.</p>
 				<h4>Required Permissions</h4>
-				<p class="command-perms">Server Owner</p>
+				<p class="command-perms">Manage Roles</p>
+			</div>
+			
+			<div class="command" id="react-createmsg">
+				<h3 class="command-header">Create Reaction Message</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$rr createmsg <span class="arg">"title"</span> <span class="arg">description</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Create a reaction role message in the server's reaction channel using the given title and description.</p>
+				<h4>Required Permissions</h4>
+				<p class="command-perms">Manage Roles</p>
+				<div class="alert alert-info">
+					<h5 class="command-note-header">Note</h5>
+					<hr>
+					<p>Make sure you wrap your title in quotes if it has spaces.</p>
+				</div>
+			</div>
+			
+			<div class="command" id="react-removemsg">
+				<h3 class="command-header">Remove Reaction Message</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$rr remove <span class="arg">message id</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Remove a reaction message. This also removes all associated reaction roles.</p>
+				<h4>Required Permissions</h4>
+				<p class="command-perms">Manage Roles</p>
+				
+			</div>
+			
+			<div class="command" id="react-addrole">
+				<h3 class="command-header">Add Reaction Role</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$rr addrole <span class="arg">message id</span> <span class="arg">emote</span> <span class="arg">role</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Add a reaction role to the given reaction message, using the input reaction emote. When reacted to, it will give that person the role.</p>
+				<h4>Required Permissions</h4>
+				<p class="command-perms">Manage Roles</p>
+				<div class="alert alert-info">
+					<h5 class="command-note-header">Note</h5>
+					<hr>
+					<p>You may notice the reaction gets removed after you react. This is completely normal behavior. To see the reaction role totals, use the $$rolecount command.</p>
+					<img src="react.gif"></img>
+				</div>
+				
+			</div>
+			
+			<div class="command" id="react-delrole">
+				<h3 class="command-header">Remove Reaction Role</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$rr delrole <span class="arg">message id</span> <span class="arg">role</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Remove a reaction role from a reaction message.</p>
+				<h4>Required Permissions</h4>
+				<p class="command-perms">Manage Roles</p>
+				
+			</div>
+			
+			<div class="command" id="react-edit">
+				<h3 class="command-header">Edit Reaction Message</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$rr edit <span class="arg">message id</span> <span class="arg">title, description, or color</span> <span class="arg">value</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Edit a reaction message's title, description, or color.</p>
+				<h4>Required Permissions</h4>
+				<p class="command-perms">Manage Roles</p>
+				<div class="alert alert-info">
+					<h5 class="command-note-header">Note</h5>
+					<hr>
+					<p>Embed Colors use hexadecimal values. Example: #3366FF</p>
+				</div>
+			</div>
+			
+			<div class="command" id="react-toggle">
+				<h3 class="command-header">Toggle Role Limit</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$rr togglelimit</p>
+				<h4>Description</h4>
+				<p class="command-description">When this is enabled, users will only be allowed 1 role per reaction message.</p>
+				<h4>Required Permissions</h4>
+				<p class="command-perms">Manage Roles</p>
+				
 			</div>
 			
 			
