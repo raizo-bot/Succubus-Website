@@ -62,33 +62,80 @@
 				</ul>
 			</div>
 			
-			<div class="command" id="star-ban">
-			  <h3 class="command-header">Ban</h3>
+			<div class="command" id="star-sb">
+			  <h3 class="command-header">Starboard Information</h3>
 				<hr class="category-header-hr"/>
 				<h4>Usage</h4>
-				<p class="command-usage">ban <span class="arg">user</span></p>
+				<p class="command-usage">starboard</p>
 				<h4>Description</h4>
-				<p class="command-description">Bans <span class="arg">user</span> from the server</p>
+				<p class="command-description">View the current starboard settings for the server.</p>
 				<h4>Required Permissions</h4>
-				<p class="command-perms">Ban Users</p>
+				<p class="command-perms">Manage Channels</p>
+				<div class="alert alert-info">
+					<h5 class="command-note-header">Alias</h5>
+					<hr>
+					<p>All commands start with <span class="arg">starboard</span>, or the <span class="arg">sb</span> alias can be used.</p>
+				</div>
 		  </div>
 			
-			<div class="command" id="star-dab">
-				<h3 class="command-header">Dab</h3>
+			<div class="command" id="star-setup">
+				<h3 class="command-header">Starboard Setup</h3>
 				<hr class="category-header-hr"/>
 				<h4>Usage</h4>
-				<p class="command-usage">dab <span class="arg">user</span></p>
+				<p class="command-usage">$$sb setup <span class="arg">#channel</span></p>
 				<h4>Description</h4>
-				<p class="command-description">Dabs on <span class="arg">user</span></p>
+				<p class="command-description">Set the channel for starboard messages to be sent to.</p>
 				<h4>Required Permissions</h4>
-				<p class="command-perms">Server Owner</p>
+				<p class="command-perms">Manage Channels</p>
 			</div>
 			
+			<div class="command" id="star-setupnsfw">
+				<h3 class="command-header">NSFW Starboard Setup</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$sb setup nsfw <span class="arg">#channel</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Set the channel for NSFW starboard messages to be sent to. If a message is starboarded in an NSFW channel, it will be sent here.</p>
+				<h4>Required Permissions</h4>
+				<p class="command-perms">Manage Channels</p>
+			</div>
+			
+			<div class="command" id="star-setstars">
+				<h3 class="command-header">Starboard Star Count</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$sb setstars <span class="arg">count</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Set the required emote reactions to get onto the starboard. Both the NSFW and regular starboard share the same requirement.</p>
+				<h4>Required Permissions</h4>
+				<p class="command-perms">Manage Channels</p>
+				<div class="alert alert-danger">
+					<h5 class="command-note-header">Warning</h5>
+					<hr>
+					<p>By default, Discord's message reaction limit per emote is 5000. Make sure your star requirement is not too excessive.</p>
+				</div>
+			</div>
+			
+			<div class="command" id="star-setemote">
+				<h3 class="command-header">Starboard Emote</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$sb setemote <span class="arg">emote</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Set the emote that messages have to be reacted to with in order to get onto the starboard. Both Emojis and Custom Emotes work. By default, the starboard uses a star emoji. (⭐)</p>
+				<h4>Required Permissions</h4>
+				<p class="command-perms">Manage Channels</p>
+				<div class="alert alert-danger">
+					<h5 class="command-note-header">Warning</h5>
+					<hr>
+					<p>If you change the starboard emote with messages already on the starboard, previous starboarded messages will no longer be recognized.</p>
+				</div>
+			</div>
 			
 		</div>
 	
 		<footer>
-			<p class="footer-credit">Website created by Drewcification</p>
+			<center><p class="footer-credit">Website created by Drewcification</p></center>
 		</footer>
 </body>
 </html>
