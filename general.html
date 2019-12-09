@@ -48,33 +48,114 @@
 			
 			<h1 class="category-header">General Commands</h1>
 			
-			<div class="command" id="gen-ban">
-				<h3 class="command-header">Ban</h3>
+			<div class="command" id="gen-help">
+				<h3 class="command-header">Help</h3>
 				<hr class="category-header-hr"/>
 				<h4>Usage</h4>
-				<p class="command-usage">ban <span class="arg">user</span></p>
+				<p class="command-usage">$$help <span class="arg">[category]</span></p>
 				<h4>Description</h4>
-				<p class="command-description">Bans <span class="arg">user</span> from the server</p>
-				<h4>Required Permissions</h4>
-				<p class="command-perms">Ban Users</p>
+				<p class="command-description">Recieve help on the input <span class="arg">category</span>. If no category is input, all valid categories will be listed.</p>
 			</div>
 			
-			<div class="command" id="gen-dab">
-				<h3 class="command-header">Dab</h3>
+			<div class="command" id="gen-ping">
+				<h3 class="command-header">Ping</h3>
 				<hr class="category-header-hr"/>
 				<h4>Usage</h4>
-				<p class="command-usage">dab <span class="arg">user</span></p>
+				<p class="command-usage">$$ping</p>
 				<h4>Description</h4>
-				<p class="command-description">Dabs on <span class="arg">user</span></p>
-				<h4>Required Permissions</h4>
-				<p class="command-perms">Server Owner</p>
+				<p class="command-description">View the bot's latency and Discord's latency.</p>				
+			</div>
+			
+			<div class="command" id="gen-invite">
+				<h3 class="command-header">Invite</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$invite</p>
+				<h4>Description</h4>
+				<p class="command-description">View the link to invite Succubus to your own server, and a link to the Succubus Support server.</p>				
+			</div>
+			
+			<div class="command" id="gen-changelog">
+				<h3 class="command-header">Changelog</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$changelog</p>
+				<h4>Description</h4>
+				<p class="command-description">View the most recent changes made to Succubus.</p>				
+			</div>
+			
+			<div class="command" id="gen-ava">
+				<h3 class="command-header">Avatar</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$ava <span class="arg">[user]</span></p>
+				<h4>Description</h4>
+				<p class="command-description">View the avatar if the input <span class="arg">user</span>. If no user is input, gets your own avatar.</p>				
+			</div>
+			
+			<div class="command" id="gen-mtg">
+				<h3 class="command-header">Magic the Gathering</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$mtg <span class="arg">card name</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Searches a Magic the Gathering card database for the input <span class="arg">card name</span>.</p>	
 				<div class="alert alert-info">
 					<h5 class="command-note-header">Note</h5>
 					<hr>
-					<p>Ethan is a bitch</p>
-				</div>
+					<p>This command is still in a beta testing phase, so some card results may not work.</p>
+				</div>	
 			</div>
 			
+			<div class="command" id="gen-sauce">
+				<h3 class="command-header">SauceNAO</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$ava <span class="arg">[url]</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Search the most recent image or the input <span class="arg">url</span> in the <a href="https://saucenao.com/">SauceNAO</a> database.</p>				
+				<div class="alert alert-danger">
+					<h5 class="command-note-header">Warning</h5>
+					<hr>
+					<p>The bot will only scan for images in the past 5 messages. If there are none, a valid URL (.jpg, .png, or .gif) must be input.</p>
+				</div>	
+			</div>
+			
+			<div class="command" id="gen-bigemote">
+				<h3 class="command-header">Big Emote</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$bigemote <span class="arg">emote</span></p>
+				<h4>Description</h4>
+				<p class="command-description">View an image version of the input custom emote. Regular emojis do not work.</p>				
+			</div>
+			
+			<div class="command" id="gen-praise">
+				<h3 class="command-header">Praise</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$praise <span class="arg">url</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Praise the input image.</p>				
+			</div>
+			
+			<div class="command" id="gen-rolecount">
+				<h3 class="command-header">Reaction Role Count</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$rolecount</p>
+				<h4>Description</h4>
+				<p class="command-description">Count how many users have reacted to each reaction role, if there are any.</p>				
+			</div>
+			
+			<div class="command" id="gen-startop">
+				<h3 class="command-header">Starboard Leaderboard</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$startop <span class="arg">week, month, or alltime</span></p>
+				<h4>Description</h4>
+				<p class="command-description">View the top starboard post for the week, month, or all time top post. Defaults to <span class="arg">alltime</span> if nothing is input.</p>				
+			</div>
 			
 		</div>
 	
