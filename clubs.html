@@ -147,7 +147,21 @@
 			  <h3 class="command-header">Mention Ping Club</h3>
 				<hr class="category-header-hr"/>
 				<h4>Usage</h4>
-				<p class="command-usage">$$pingclub ping <span class="arg">channel</span> <span class="arg">club</span> <span class="arg">message</span></p>
+				<p class="command-usage">$$pingclub ping <span class="arg">club</span> <span class="arg">message</span></p>
+				<h4>Description</h4>
+				<p class="command-description">Mention ALL users in the given ping club with the given message, in the current channel.</p>
+				<div class="alert alert-info">
+					<h5 class="command-note-header">Note</h5>
+					<hr>
+					<p>If there are more than 30 members in a ping club, the bot will provide a warning that must be accepted before the message is sent, to prevent any false pings or abuse.</p>
+				</div>	
+		  </div>
+		  
+		   <div class="command" id="club-mentionchnl">
+			  <h3 class="command-header">Mention Ping Club in a Channel</h3>
+				<hr class="category-header-hr"/>
+				<h4>Usage</h4>
+				<p class="command-usage">$$pingclub pingchnl <span class="arg">channel</span> <span class="arg">club</span> <span class="arg">message</span></p>
 				<h4>Description</h4>
 				<p class="command-description">Mention ALL users in the given ping club with the given message, in the input channel. Make sure the bot has permissions for said channel.</p>
 				<div class="alert alert-info">
@@ -156,6 +170,7 @@
 					<p>If there are more than 30 members in a ping club, the bot will provide a warning that must be accepted before the message is sent, to prevent any false pings or abuse.</p>
 				</div>	
 		  </div>
+			
 			
 			 <div class="command" id="club-pingmode">
 			  <h3 class="command-header">Ping Club Mention Mode</h3>
